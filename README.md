@@ -27,7 +27,7 @@ To run the server, use:
 
 ```bash
 python employee_portal/manage.py runserver
-
+```
 
 ## ⚙️ How to Run
 
