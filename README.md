@@ -25,3 +25,5 @@ A Django-based web application that allows CRUD operations on employee data. Bui
 ## ⚙️ How to Run
 
 1. Clone this repo:
+```
+git clone https://github.com/omkarpawar2002/employee-management-system.git
