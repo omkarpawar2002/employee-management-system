@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>USER SIGN IN / LOGIN</title>
+{% endblock %}
+
+{% block content %}
+<div class="container bg-info" style="padding: 20px;">
+    <h1 style="text-align: center;">USER SIGN IN / LOGIN</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="email">USERNAME</label>
+            <input type="email" name="email" id="email" placeholder="Enter your username" class="form-control">
+        </div>
+        <br>
+        <div>
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="password" placeholder="********" class="form-control">
+        </div>
+        <br>
+        <div>
+            <button type="submit" class="btn btn-dark col-5 me-3">LOG IN</button>
+            <a href="{% url 'sign_up' %}"><button type="button"
+                    class="btn btn-dark col-5 me-3 float-end">REGISTER</button></a>
+        </div>
+    </form>
+</div>
+{% endblock %}

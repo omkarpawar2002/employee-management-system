@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>SHOW EMPLOYEE</title>
+{% endblock %}
+
+{% block content %}
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>EMPLOYEE ID</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>MOBILE NO</th>
+            <th>GENDER</th>
+            <th>CITY</th>
+            <!-- <th>ADDRESS</th> -->
+            <th>DEPARTMENT</th>
+            <th>EMAIL ID</th>
+            <th>PASSWORD</th>
+            <th>ELIGIBILITY</th>
+            <th style="text-align: center;">ACTIONS</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{record.eid}}</td>
+            <td>{{record.first_name}}</td>
+            <td>{{record.last_name}}</td>
+            <td>{{record.mobile}}</td>
+            <td>{{record.gender}}</td>
+            <td>{{record.city}}</td>
+            <!-- <td>{{record.address}}</td> -->
+            <td>{{record.dept}}</td>
+            <td>{{record.email}}</td>
+            <td>{{record.password}}</td>
+            <td>{{record.eligible}}</td>
+            <td>
+                <a href="{% url 'update_emp' record.eid %}"><button type="button" class="btn btn-outline-light btn-large me-3">UPDATE</button></a>
+                <a href="{% url 'delete_emp' record.eid %}"><button type="button"
+                        class="btn btn-outline-light btn-large float-end">DELETE</button></a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
