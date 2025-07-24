@@ -22,6 +22,13 @@ A Django-based web application that allows CRUD operations on employee data. Bui
 ![Dashboard](screenshots/dashboard.png)
 ![Employee Form](screenshots/employee_form.png) -->
 
+⚠️ Note: In this project, `manage.py` is located inside the `employee_portal/` directory instead of the root.  
+To run the server, use:
+
+```bash
+python employee_portal/manage.py runserver
+
+
 ## ⚙️ How to Run
 
 1. Clone this repo:
@@ -53,12 +60,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## 📁 Folder Structure
-```
-employee-management-system/
-├── employee_portal/
-├── venv/
-├── manage.py
-├── README.md
-└── .gitignore
-```
+## 🙋‍♂️ Author
+
+**Omkar Pawar**  
+[GitHub](https://github.com/omkarpawar2002)
